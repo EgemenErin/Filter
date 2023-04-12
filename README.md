@@ -8,8 +8,9 @@ So to convert a pixel to grayscale, we just need to make sure the red, green, an
 In fact, to ensure each pixel of the new image still has the same general brightness or darkness as the old image, we can take the average of the red, green, and blue values to determine what shade of grey to make the new pixel.
 If you apply that to each pixel in the image, the result will be an image converted to grayscale.
 
-#Sepia
+Sepia
 --------------------------
+
 Most image editing programs support a “sepia” filter, which gives images an old-timey feel by making the whole image look a bit reddish-brown.
 An image can be converted to sepia by taking each pixel, and computing new red, green, and blue values based on the original values of the three.
 There are a number of algorithms for converting an image to sepia, but for this problem, we’ll ask you to use the following algorithm. For each pixel, the sepia color values should be calculated based on the original color values per the below.
@@ -22,12 +23,12 @@ There are a number of algorithms for converting an image to sepia, but for this 
 
 Of course, the result of each of these formulas may not be an integer, but each value could be rounded to the nearest integer. It’s also possible that the result of the formula is a number greater than 255, the maximum value for an 8-bit color value. In that case, the red, green, and blue values should be capped at 255. As a result, we can guarantee that the resulting red, green, and blue values will be whole numbers between 0 and 255, inclusive.
 
-#Reflection
+Reflection
 --------------------------
 Some filters might also move pixels around. Reflecting an image, for example, is a filter where the resulting image is what you would get by placing the original image in front of a mirror. So any pixels on the left side of the image should end up on the right, and vice versa.
 Note that all of the original pixels of the original image will still be present in the reflected image, it’s just that those pixels may have rearranged to be in a different place in the image.
 
-#Blur
+Blur
 --------------------------
 There are a number of ways to create the effect of blurring or softening an image. For this problem, we’ll use the “box blur,” which works by taking each pixel and, for each color value, giving it a new value by averaging the color values of neighboring pixels.
 Consider a grid of pixels, where we’ve numbered each pixel.
