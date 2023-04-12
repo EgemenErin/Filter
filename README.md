@@ -7,7 +7,7 @@ Recall that if the red, green, and blue values are all set to 0x00 (hexadecimal 
 So to convert a pixel to grayscale, we just need to make sure the red, green, and blue values are all the same value. But how do we know what value to make them? Well, it’s probably reasonable to expect that if the original red, green, and blue values were all pretty high, then the new value should also be pretty high. And if the original values were all low, then the new value should also be low.
 In fact, to ensure each pixel of the new image still has the same general brightness or darkness as the old image, we can take the average of the red, green, and blue values to determine what shade of grey to make the new pixel.
 If you apply that to each pixel in the image, the result will be an image converted to grayscale.
-
+-
 #Sepia
 
 Most image editing programs support a “sepia” filter, which gives images an old-timey feel by making the whole image look a bit reddish-brown.
